@@ -8,4 +8,5 @@ spec:
   ports:
   - port: 15672
     targetPort: vpromq-port
+    protocol: TCP
   type: ClusterIP
