@@ -22,10 +22,10 @@ spec:
               containerPort: 8080
       initContainers: 
         - name: init-mydb
-          image: busybox:latest
-          command: ['sh', '-c', 'until nslookup vprodb; do echo waiting for mydb; sleep 2; done]
+          image: busybox
+          command: ['sh', '-c', 'until nslookup vprodb; do echo waiting for mydb; sleep 2; done;']
         - name: init-mymc
-          image: busybox:latest
-          command: ['sh', '-c', 'until nslookup vpromc; do echo waiting for mydb; sleep 2; done]
+          image: busybox
+          command: ['sh', '-c', 'until nslookup vpromc; do echo waiting for mydb; sleep 2; done;']
 
           
